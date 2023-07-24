@@ -33,3 +33,9 @@ variable "ipv6_enabled" {
   type        = bool
   default     = false
 }
+
+variable "karpenter_node_ttl" {
+  description = "kaperpenter provisioned node TTL(time to live) in seconds"
+  type = number
+  default = 1209600
+}

@@ -52,6 +52,7 @@ module "eks_bootstrap" {
     instance_capacity_type = ["spot"]
     excluded_instance_type = ["nano", "micro", "small"]
     instance_hypervisor    = ["nitro"]   ## Instance hypervisor is picked up only if IPv6 enable is chosen
+    karpenter_node_ttl     = 1209600  # Karpenter provisioned node TTL in seconds
   }
   cert_manager_letsencrypt_email                = "email@example.com"
   internal_ingress_nginx_enabled                = true

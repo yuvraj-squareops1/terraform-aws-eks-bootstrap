@@ -218,6 +218,7 @@ module "karpenter_provisioner" {
   karpenter_ec2_capacity_type          = var.karpenter_provisioner_config.instance_capacity_type
   excluded_karpenter_ec2_instance_type = var.karpenter_provisioner_config.excluded_instance_type
   instance_hypervisor                  = var.karpenter_provisioner_config.instance_hypervisor
+  karpenter_node_ttl = var.karpenter_provisioner_config.karpenter_node_ttl
 }
 
 resource "kubernetes_namespace" "internal_nginx" {

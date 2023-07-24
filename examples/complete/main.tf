@@ -55,6 +55,7 @@ module "eks_bootstrap" {
     instance_capacity_type = ["on-demand"]
     excluded_instance_type = ["nano", "micro", "small"]
     instance_hypervisor    = ["nitro"]
+    karpenter_node_ttl     = 1209600
   }
   cert_manager_letsencrypt_email                = "email@email.com"
   internal_ingress_nginx_enabled                = true

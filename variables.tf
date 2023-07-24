@@ -249,6 +249,7 @@ variable "karpenter_provisioner_config" {
     instance_capacity_type = ["spot"]
     excluded_instance_type = ["nano", "micro", "small"]
     instance_hypervisor    = ["nitro"]
+    karpenter_node_ttl = 1209600
   }
   type = any
 }
