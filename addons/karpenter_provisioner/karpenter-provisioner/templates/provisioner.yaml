@@ -19,8 +19,8 @@ spec:
     {{- end }}
   providerRef:                                # optional, recommended to use instead of `provider`
     name: karpenter-node-template
-  {{- if .Values.ttlSecondsAfterEmpty }}
-  ttlSecondsAfterEmpty: {{ .Values.ttlSecondsAfterEmpty }}
+  {{- if .Values.ttlSecondsUntilExpired }}
+  ttlSecondsUntilExpired: {{ .Values.ttlSecondsUntilExpired }}
   {{- end }}                    # optional, but never scales down if not set
   # ttlSecondsUntilExpired: 600     # optional, but never expires if not set
 
